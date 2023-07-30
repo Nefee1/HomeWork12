@@ -2,7 +2,10 @@ package HomeWork12;
 
 public class Main {
     public static void main(String[] args) {
-        Book king = new Book("It", 1956);
+        Author stiven = new Author("Cтивен", "Кинг");
+        Author berd = new Author("Oven", "berd");
+
+        Book king = new Book("It", stiven ,1956);
         System.out.println("Имя книги " + king.getBookName());
         System.out.println("Имя книги " + king.getBookPublicationYear());
         king.setBookPublicationYear(1957);
@@ -10,15 +13,15 @@ public class Main {
 
         System.out.println();
 
-        Book stiven = new Book("shine", 1858);
-        System.out.println("Имя книги " + stiven.getBookName());
-        System.out.println("Имя книги " + stiven.getBookPublicationYear());
-        stiven.setBookPublicationYear(1850);
-        System.out.println("Имя книги " + stiven.getBookPublicationYear());
+        Book stiven2 = new Book("shine", berd,  1858);
+        System.out.println("Имя книги " + stiven2.getBookName());
+        System.out.println("Имя книги " + stiven2.getBookPublicationYear());
+        stiven2.setBookPublicationYear(1850);
+        System.out.println("Имя книги " + stiven2.getBookPublicationYear());
 
         System.out.println();
 
-        Author name = new Author("King", "stiven");
+        Author name = new Author("King", "stiven2");
         System.out.println("Имя афтора " + name.getAuthorName());
         System.out.println("Фамилия афтора " + name.getsurnameAuthor());
 
