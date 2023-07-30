@@ -11,8 +11,9 @@ public class Main {
         System.out.println();
 
         Book stiven = new Book("shine", 1858);
-        stiven.setBookPublicationYear(1850);
         System.out.println("Имя книги " + stiven.getBookName());
+        System.out.println("Имя книги " + stiven.getBookPublicationYear());
+        stiven.setBookPublicationYear(1850);
         System.out.println("Имя книги " + stiven.getBookPublicationYear());
 
         System.out.println();
