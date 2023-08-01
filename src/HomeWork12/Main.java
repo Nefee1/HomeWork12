@@ -5,31 +5,31 @@ public class Main {
         Author stiven = new Author("Cтивен", "Кинг");
         Author berd = new Author("Oven", "berd");
 
-        Book king = new Book("It", stiven ,1956);
-        System.out.println("Имя книги " + king.getBookName());
-        System.out.println("Имя книги " + king.getBookPublicationYear());
+        Book king = new Book("It", stiven, 1956);
+
         king.setBookPublicationYear(1957);
-        System.out.println("Имя книги " + king.getBookPublicationYear());
 
         System.out.println();
 
-        Book stiven2 = new Book("shine", berd,  1858);
-        System.out.println("Имя книги " + stiven2.getBookName());
-        System.out.println("Имя книги " + stiven2.getBookPublicationYear());
+        Book stiven2 = new Book("shine", berd, 1858);
+
         stiven2.setBookPublicationYear(1850);
-        System.out.println("Имя книги " + stiven2.getBookPublicationYear());
 
         System.out.println();
 
-        Author name = new Author("King", "stiven2");
-        System.out.println("Имя афтора " + name.getAuthorName());
-        System.out.println("Фамилия афтора " + name.getsurnameAuthor());
+        Author name = new Author("King", "stiven");
 
         System.out.println();
 
         Author name2 = new Author("Anna", "Backer");
-        System.out.println("Имя афтора " + name2.getAuthorName());
-        System.out.println("Фамилия афтора " + name2.getsurnameAuthor());
 
+        System.out.println(berd.equals(stiven));
+
+        printSystem(king);
+        printSystem(stiven2);
+    }
+    private static void printSystem(Book book){
+        System.out.println(book.toString());
     }
 }
+

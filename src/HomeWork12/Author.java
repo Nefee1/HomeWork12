@@ -1,5 +1,7 @@
 package HomeWork12;
 
+import java.util.Objects;
+
 class Author {
     private String authorName;
     private String surnameAuthor;
@@ -17,4 +19,24 @@ class Author {
         return this.surnameAuthor;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author = (Author) o;
+        return Objects.equals(authorName, author.authorName) && Objects.equals(surnameAuthor, author.surnameAuthor);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(authorName, surnameAuthor);
+    }
+
+    @Override
+    public String toString() {
+        return "Author{" +
+                "authorName='" + authorName + '\'' +
+                ", surnameAuthor='" + surnameAuthor + '\'' +
+                '}';
+    }
 }
